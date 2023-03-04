@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import City from './assets/city.jpg'
+import ListRender from './components/ListRender';
+import ManageData from './components/ManageData';
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className='App'>
+      <h1>Avançando em React</h1>
+      {/* Imagem em public */}
+      <div>
+        <img src="/7.jpg" alt="Banner" />
+      </div>
+      <h2>Imagem em Assets</h2>
+      {/* Imagem em Assets */}
+      <div>
+        <img src={City} alt="Cidade" />
+      </div>
+      <ManageData />
+      <ListRender />
+      </div>
+  )
 }
 
 export default App;
