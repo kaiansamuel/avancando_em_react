@@ -4,6 +4,7 @@ import City from './assets/city.jpg'
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 import Fragments from './components/Fragments';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -16,6 +17,10 @@ function App(){
     { id: 2, brand: "Kia", color: "Branco", newCar: false, km: 343433 },
     { id: 3, brand: "Renault", color: "Azul", newCar: false, km: 2456 },
   ]
+
+  function showMessage(){
+    console.log("Evento do componente Pai")
+  }
 
   return (
     <div className='App'>
@@ -40,6 +45,7 @@ function App(){
       <CarDetails brand="Fiat" km={4500} color="Branco"newCar={false} />
       { /* loop em array de objetos */ }
       <CarDetails 
+        key={cars.id}
         brand={cars.brand}
         color={cars.color}
         km={cars.km}
@@ -49,6 +55,7 @@ function App(){
        <Container>
         <p>E este é o conteudo!</p>
        </Container>
+       <ExecuteFunction myFunction={showMessage}/>
       </div>
   )
 }
