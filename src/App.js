@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-no-undef */
 import './App.css';
 import City from './assets/city.jpg'
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
+import Container from './components/Container';
 import Fragments from './components/Fragments';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -44,6 +46,9 @@ function App(){
         newCar={cars.newCar}
         />
         <Fragments propsFragment='Teste' />
+       <Container>
+        <p>E este é o conteudo!</p>
+       </Container>
       </div>
   )
 }
