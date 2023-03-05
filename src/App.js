@@ -1,3 +1,4 @@
+import { findAllByTestId } from '@testing-library/react';
 import './App.css';
 import City from './assets/city.jpg'
 import CarDetails from './components/CarDetails';
@@ -26,6 +27,8 @@ function App(){
       <ShowUserName name='Kaian'/>
       {/* desestructuring em props */}
       <CarDetails brand="VW" km={1000} color="Azul" />
+      <CarDetails brand="Ford" km={0} color="Vermelho" newCar={true}/>
+      <CarDetails brand="Fiat" km={4500} color="Branco"newCar={false} />
       </div>
   )
 }
